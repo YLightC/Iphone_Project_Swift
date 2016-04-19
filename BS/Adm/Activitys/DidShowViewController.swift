@@ -44,6 +44,7 @@ class DidShowViewController: UIViewController {
         tableView.backgroundColor = UIColor.clearColor()
         let cellNib = UINib(nibName: "UserDidiShowTableViewCell", bundle: nil)
         tableView.registerNib(cellNib, forCellReuseIdentifier: cellIdentifier)
+        startHeadRefresh(tableView, reloadData: initGetData)
         initGetData()
     }
     
@@ -78,10 +79,10 @@ extension DidShowViewController : UITableViewDataSource, UITableViewDelegate {
 //        cell.timeLabel.text = "2015-12-25 20:30"
 //        cell.addressLabel.text = "首都体育场"
         
-        cell.nameLabel.text = didActivityInfo[indexPath.row]["acname"]
-        cell.timeLabel.text = didActivityInfo[indexPath.row]["actime"]
-        cell.addressLabel.text = didActivityInfo[indexPath.row]["acaddress"]
-        cell.titleImage.image = getImage(didActivityInfo[indexPath.row]["accover"]!)
+        cell.nameLabel.text = didActivityInfo[indexPath.section]["acname"]
+        cell.timeLabel.text = didActivityInfo[indexPath.section]["actime"]
+        cell.addressLabel.text = didActivityInfo[indexPath.section]["acaddress"]
+        cell.titleImage.image = getImage(didActivityInfo[indexPath.section]["accover"]!)
         
         return cell
     }
@@ -98,6 +99,8 @@ extension DidShowViewController : UITableViewDataSource, UITableViewDelegate {
 extension DidShowViewController {
     func initGetData() {
         showHud()
+        activityInfo.removeAll()
+        didActivityInfo.removeAll()
         let database = FMDatabase(path: path().path)
         if database.open() {
             do {
@@ -112,7 +115,6 @@ extension DidShowViewController {
                     dic["actime"] = pwd
                     dic["acaddress"] = status
                     dic["accover"] = cover
-                    print("dic = \(dic)")
                     activityInfo.append(dic)
                 }
             } catch {
@@ -122,7 +124,6 @@ extension DidShowViewController {
             ToastInfo("获取数据失败!")
         }
         
-        print("activityInfo = \(activityInfo)")
         database.close()
         popHud()
         let dataFormat = NSDateFormatter()
@@ -131,10 +132,11 @@ extension DidShowViewController {
 
         activityInfo.forEach({
             if $0["actime"] < starttime {
+                print("$0 = \($0)")
                 didActivityInfo.append($0)
             }
         })
-        
+        stopHeadRefresh(tableView)
         if didActivityInfo.count == 0 {
             ToastInfo("没有已举办过的活动！")
         } else {

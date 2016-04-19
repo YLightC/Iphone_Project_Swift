@@ -137,7 +137,11 @@ extension UserMineViewController : UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier(mineIdentifier, forIndexPath: indexPath) as! UserMineTableViewCell
             cell.id.text = self.id
             cell.name.text = self.name
-            cell.headImage.image = getImage(headphoto)
+            if getImage(headphoto) != nil {
+                cell.headImage.image = getImage(headphoto)
+            }
+            
+            cell.headImage.userInteractionEnabled = true
             let headImageAction = UITapGestureRecognizer(target: self, action: #selector(UserMineViewController.tapAddButton))
             cell.headImage.addGestureRecognizer(headImageAction)
             return cell
@@ -195,6 +199,7 @@ extension UserMineViewController : UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
     func tapAddButton() {
         let actionSheet = UIActionSheet(title: "选择图片",
                                         delegate: nil,

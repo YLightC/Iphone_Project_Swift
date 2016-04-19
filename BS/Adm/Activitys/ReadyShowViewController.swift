@@ -41,6 +41,7 @@ class ReadyShowViewController: UIViewController {
         tableView.backgroundColor = UIColor.clearColor()
         let cellNib = UINib(nibName: "UserReadyTableViewCell", bundle: nil)
         tableView.registerNib(cellNib, forCellReuseIdentifier: cellIdentifier)
+        startHeadRefresh(tableView, reloadData: initGetData)
         initGetData()
     }
     
@@ -75,10 +76,10 @@ extension ReadyShowViewController : UITableViewDataSource, UITableViewDelegate {
 //        cell.timeLabel.text = "2016-12-25 20:30"
 //        cell.addressLabel.text = "玫瑰公馆"
         
-        cell.nameLabel.text = willActivityInfo[indexPath.row]["acname"]
-        cell.timeLabel.text = willActivityInfo[indexPath.row]["actime"]
-        cell.addressLabel.text = willActivityInfo[indexPath.row]["acaddress"]
-        cell.titleImage.image = getImage(willActivityInfo[indexPath.row]["accover"]!)
+        cell.nameLabel.text = willActivityInfo[indexPath.section]["acname"]
+        cell.timeLabel.text = willActivityInfo[indexPath.section]["actime"]
+        cell.addressLabel.text = willActivityInfo[indexPath.section]["acaddress"]
+        cell.titleImage.image = getImage(willActivityInfo[indexPath.section]["accover"]!)
         
         return cell
     }
@@ -95,6 +96,8 @@ extension ReadyShowViewController : UITableViewDataSource, UITableViewDelegate {
 extension ReadyShowViewController {
     func initGetData() {
         showHud()
+        activityInfo.removeAll()
+        willActivityInfo.removeAll()
         let database = FMDatabase(path: path().path)
         if database.open() {
             do {
@@ -109,7 +112,6 @@ extension ReadyShowViewController {
                     dic["actime"] = pwd
                     dic["acaddress"] = status
                     dic["accover"] = cover
-                    print("dic = \(dic)")
                     activityInfo.append(dic)
                 }
             } catch {
@@ -119,8 +121,6 @@ extension ReadyShowViewController {
             ToastInfo("获取数据失败!")
         }
         
-        print("activityInfo = \(activityInfo)")
-        
         database.close()
         popHud()
         let dataFormat = NSDateFormatter()
@@ -128,11 +128,12 @@ extension ReadyShowViewController {
         let starttime = dataFormat.stringFromDate(NSDate())
         
         activityInfo.forEach({
+            print("$0 = \($0)")
             if $0["actime"] >= starttime {
                 willActivityInfo.append($0)
             }
         })
-        
+        stopHeadRefresh(tableView)
         if willActivityInfo.count == 0 {
             ToastInfo("没有将要举办过的活动！")
         } else {

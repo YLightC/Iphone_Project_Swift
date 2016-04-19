@@ -138,7 +138,9 @@ extension AdmMineViewController : UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier(mineIdentifier, forIndexPath: indexPath) as! MineTableViewCell
             cell.name.text = self.name
             cell.id.text = self.userid
-            cell.headImage.image = getImage(headphoto)
+            if getImage(headphoto) != nil {
+                cell.headImage.image = getImage(headphoto)
+            }
             cell.headImage.userInteractionEnabled = true
             let headImageAction = UITapGestureRecognizer(target: self, action: #selector(AdmMineViewController.tapAddButton))
             cell.headImage.addGestureRecognizer(headImageAction)

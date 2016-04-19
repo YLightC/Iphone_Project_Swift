@@ -99,7 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8200C9801C4FBB3000668F72 /* BS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8200C9801C4FBB3000668F72 /* 员工请假审批系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "员工请假审批系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8200C9831C4FBB3100668F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8200C9851C4FBB3100668F72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8200C9881C4FBB3100668F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,10 +107,10 @@
 		8200C98D1C4FBB3100668F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8200C9901C4FBB3100668F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8200C9921C4FBB3100668F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8200C9971C4FBB3100668F72 /* BSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8200C9971C4FBB3100668F72 /* 员工请假审批系统.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "员工请假审批系统.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8200C99B1C4FBB3100668F72 /* BSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTests.swift; sourceTree = "<group>"; };
 		8200C99D1C4FBB3100668F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8200C9A21C4FBB3100668F72 /* BSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8200C9A21C4FBB3100668F72 /* 员工请假审批系统.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "员工请假审批系统.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8200C9A61C4FBB3100668F72 /* BSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUITests.swift; sourceTree = "<group>"; };
 		8200C9A81C4FBB3100668F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8200C9BF1C4FCF9600668F72 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -224,9 +224,9 @@
 		8200C9811C4FBB3000668F72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8200C9801C4FBB3000668F72 /* BS.app */,
-				8200C9971C4FBB3100668F72 /* BSTests.xctest */,
-				8200C9A21C4FBB3100668F72 /* BSUITests.xctest */,
+				8200C9801C4FBB3000668F72 /* 员工请假审批系统.app */,
+				8200C9971C4FBB3100668F72 /* 员工请假审批系统.xctest */,
+				8200C9A21C4FBB3100668F72 /* 员工请假审批系统.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -443,9 +443,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8200C97F1C4FBB3000668F72 /* BS */ = {
+		8200C97F1C4FBB3000668F72 /* 员工请假审批系统 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8200C9AB1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "BS" */;
+			buildConfigurationList = 8200C9AB1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "员工请假审批系统" */;
 			buildPhases = (
 				0EA99A41F62743EA9931AC96 /* Check Pods Manifest.lock */,
 				8200C97C1C4FBB3000668F72 /* Sources */,
@@ -458,14 +458,14 @@
 			);
 			dependencies = (
 			);
-			name = BS;
+			name = "员工请假审批系统";
 			productName = BS;
-			productReference = 8200C9801C4FBB3000668F72 /* BS.app */;
+			productReference = 8200C9801C4FBB3000668F72 /* 员工请假审批系统.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8200C9961C4FBB3100668F72 /* BSTests */ = {
+		8200C9961C4FBB3100668F72 /* 员工请假审批系统Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8200C9AE1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "BSTests" */;
+			buildConfigurationList = 8200C9AE1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "员工请假审批系统Tests" */;
 			buildPhases = (
 				8200C9931C4FBB3100668F72 /* Sources */,
 				8200C9941C4FBB3100668F72 /* Frameworks */,
@@ -476,14 +476,14 @@
 			dependencies = (
 				8200C9991C4FBB3100668F72 /* PBXTargetDependency */,
 			);
-			name = BSTests;
+			name = "员工请假审批系统Tests";
 			productName = BSTests;
-			productReference = 8200C9971C4FBB3100668F72 /* BSTests.xctest */;
+			productReference = 8200C9971C4FBB3100668F72 /* 员工请假审批系统.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8200C9A11C4FBB3100668F72 /* BSUITests */ = {
+		8200C9A11C4FBB3100668F72 /* 员工请假审批系统UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8200C9B11C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "BSUITests" */;
+			buildConfigurationList = 8200C9B11C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "员工请假审批系统UITests" */;
 			buildPhases = (
 				8200C99E1C4FBB3100668F72 /* Sources */,
 				8200C99F1C4FBB3100668F72 /* Frameworks */,
@@ -494,9 +494,9 @@
 			dependencies = (
 				8200C9A41C4FBB3100668F72 /* PBXTargetDependency */,
 			);
-			name = BSUITests;
+			name = "员工请假审批系统UITests";
 			productName = BSUITests;
-			productReference = 8200C9A21C4FBB3100668F72 /* BSUITests.xctest */;
+			productReference = 8200C9A21C4FBB3100668F72 /* 员工请假审批系统.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -525,7 +525,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8200C97B1C4FBB3000668F72 /* Build configuration list for PBXProject "BS" */;
+			buildConfigurationList = 8200C97B1C4FBB3000668F72 /* Build configuration list for PBXProject "员工请假审批系统" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -538,9 +538,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8200C97F1C4FBB3000668F72 /* BS */,
-				8200C9961C4FBB3100668F72 /* BSTests */,
-				8200C9A11C4FBB3100668F72 /* BSUITests */,
+				8200C97F1C4FBB3000668F72 /* 员工请假审批系统 */,
+				8200C9961C4FBB3100668F72 /* 员工请假审批系统Tests */,
+				8200C9A11C4FBB3100668F72 /* 员工请假审批系统UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -714,12 +714,12 @@
 /* Begin PBXTargetDependency section */
 		8200C9991C4FBB3100668F72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8200C97F1C4FBB3000668F72 /* BS */;
+			target = 8200C97F1C4FBB3000668F72 /* 员工请假审批系统 */;
 			targetProxy = 8200C9981C4FBB3100668F72 /* PBXContainerItemProxy */;
 		};
 		8200C9A41C4FBB3100668F72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8200C97F1C4FBB3000668F72 /* BS */;
+			target = 8200C97F1C4FBB3000668F72 /* 员工请假审批系统 */;
 			targetProxy = 8200C9A31C4FBB3100668F72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -835,8 +835,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BYSJ;
+				PRODUCT_NAME = "员工请假审批系统";
 				SWIFT_OBJC_BRIDGING_HEADER = "BS/tool/BS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -850,8 +850,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BYSJ;
+				PRODUCT_NAME = "员工请假审批系统";
 				SWIFT_OBJC_BRIDGING_HEADER = "BS/tool/BS-Bridging-Header.h";
 			};
 			name = Release;
@@ -863,8 +863,8 @@
 				INFOPLIST_FILE = BSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BS.app/BS";
+				PRODUCT_NAME = "员工请假审批系统";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/员工请假审批系统.app/员工请假审批系统";
 			};
 			name = Debug;
 		};
@@ -875,8 +875,8 @@
 				INFOPLIST_FILE = BSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BS.app/BS";
+				PRODUCT_NAME = "员工请假审批系统";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/员工请假审批系统.app/员工请假审批系统";
 			};
 			name = Release;
 		};
@@ -886,7 +886,7 @@
 				INFOPLIST_FILE = BSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "员工请假审批系统";
 				TEST_TARGET_NAME = BS;
 				USES_XCTRUNNER = YES;
 			};
@@ -898,7 +898,7 @@
 				INFOPLIST_FILE = BSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yinyueapp.BSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "员工请假审批系统";
 				TEST_TARGET_NAME = BS;
 				USES_XCTRUNNER = YES;
 			};
@@ -907,7 +907,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8200C97B1C4FBB3000668F72 /* Build configuration list for PBXProject "BS" */ = {
+		8200C97B1C4FBB3000668F72 /* Build configuration list for PBXProject "员工请假审批系统" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8200C9A91C4FBB3100668F72 /* Debug */,
@@ -916,7 +916,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8200C9AB1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "BS" */ = {
+		8200C9AB1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "员工请假审批系统" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8200C9AC1C4FBB3100668F72 /* Debug */,
@@ -925,7 +925,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8200C9AE1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "BSTests" */ = {
+		8200C9AE1C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "员工请假审批系统Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8200C9AF1C4FBB3100668F72 /* Debug */,
@@ -934,7 +934,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8200C9B11C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "BSUITests" */ = {
+		8200C9B11C4FBB3100668F72 /* Build configuration list for PBXNativeTarget "员工请假审批系统UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8200C9B21C4FBB3100668F72 /* Debug */,

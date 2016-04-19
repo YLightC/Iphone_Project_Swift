@@ -10,7 +10,14 @@ import Foundation
 import MJRefresh
 
 extension UIViewController {
-    func initRefreshHeader(scrollView:UIScrollView?,refreshIngBlock:Void -> Void) {
-        scrollView?.mj_header = MJRefreshNormalHeader(refreshingBlock:refreshIngBlock)
+
+    func startHeadRefresh(ScrollView :UIScrollView,reloadData: Void -> Void) {
+        ScrollView.mj_header = MJRefreshNormalHeader(refreshingBlock: reloadData)
     }
+    
+    func stopHeadRefresh(ScrollView :UIScrollView) {
+        ScrollView.mj_header.endRefreshing()
+    }
+
+    
 }
