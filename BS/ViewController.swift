@@ -48,14 +48,15 @@ class ViewController: UIViewController{
         if database.open() {
             print("打开成功!")
             do {
-//                               try database.executeUpdate("create table usertable(id text primary key, psw text, status text)", values: nil)
-//                               try database.executeUpdate("insert into usertable (id, psw, status) values (?, ?, ?)", values: ["2012020186","123456789","1"])
-                //               try database.executeUpdate("delete from usertable where id=?", values: ["2012020186"])
-//                               try database.executeUpdate("create table userinfo(id text primary key, name text, sex text, phone text, address text, headphoto text)", values: nil)
-//                               try database.executeUpdate("insert into userinfo (id, name, sex, phone, address, headphoto) values (?, ?, ?, ?, ?, ?)", values: ["2012020186","姚驷旭","男","15877347757","陕西省周至县"," "])
-                //               try database.executeUpdate("update usertable set status=? where id=?", values: ["1","2012020186"])
+//                try database.executeUpdate("create table activitytable(acname text primary key, actime text, acaddress text, accover)", values: nil)
+//                try database.executeUpdate("create table usertable(id text primary key, psw text, status text)", values: nil)
+//                try database.executeUpdate("insert into usertable (id, psw, status) values (?, ?, ?)", values: ["2012020186","123456789","1"])
+//                try database.executeUpdate("delete from usertable where id=?", values: ["2012020186"])
+//                try database.executeUpdate("create table userinfo(id text primary key, name text, sex text, phone text, address text, headphoto text)", values: nil)
+//                try database.executeUpdate("insert into userinfo (id, name, sex, phone, address, headphoto) values (?, ?, ?, ?, ?, ?)", values: ["2012020186","姚驷旭","男","15877347757","陕西省周至县"," "])
+//                try database.executeUpdate("update usertable set status=? where id=?", values: ["1","2012020186"])
 //                try database.executeUpdate("create table leavetable(id text, name text, starttime text, endtime text, numberDays text, type text, typeInfo text, photo text, status text)", values: nil)
-//                try database.executeUpdate("drop table leavetable", values: nil)
+//                try database.executeUpdate("drop table activityTable", values: nil)
                 let rs = try database.executeQuery( "select id, psw, status from usertable", values: nil)
                 while rs.next() {
                     let id = rs.stringForColumn("id")

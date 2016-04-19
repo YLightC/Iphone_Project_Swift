@@ -102,10 +102,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-BS/SVProgressHUD.framework"
   install_framework "Pods-BS/SVPullToRefresh.framework"
   install_framework "Pods-BS/SnapKit.framework"
-  install_framework "Pods-BS/TTTAttributedLabel.framework"
   install_framework "Pods-BS/Toast.framework"
   install_framework "Pods-BS/UITableView_FDTemplateLayoutCell.framework"
-  install_framework "Pods-BS/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BS/Aspects.framework"
@@ -126,8 +124,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-BS/SVProgressHUD.framework"
   install_framework "Pods-BS/SVPullToRefresh.framework"
   install_framework "Pods-BS/SnapKit.framework"
-  install_framework "Pods-BS/TTTAttributedLabel.framework"
   install_framework "Pods-BS/Toast.framework"
   install_framework "Pods-BS/UITableView_FDTemplateLayoutCell.framework"
-  install_framework "Pods-BS/XLForm.framework"
 fi

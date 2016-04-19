@@ -63,6 +63,7 @@
 		824BB7211C60E029007A6190 /* DidCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824BB71F1C60E029007A6190 /* DidCheckTableViewCell.xib */; };
 		824BB7241C60E03C007A6190 /* WillCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824BB7221C60E03C007A6190 /* WillCheckTableViewCell.swift */; };
 		824BB7251C60E03C007A6190 /* WillCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824BB7231C60E03C007A6190 /* WillCheckTableViewCell.xib */; };
+		824F404C1CC515BD0021DAD3 /* AddDelActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F404B1CC515BD0021DAD3 /* AddDelActivityViewController.swift */; };
 		8260CC0C1C548E11009E174E /* SearchTableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260CC0A1C548E11009E174E /* SearchTableViewCellTableViewCell.swift */; };
 		8260CC0D1C548E11009E174E /* SearchTableViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8260CC0B1C548E11009E174E /* SearchTableViewCellTableViewCell.xib */; };
 		8260CC0F1C549A6B009E174E /* SearchResonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260CC0E1C549A6B009E174E /* SearchResonInfoViewController.swift */; };
@@ -161,6 +162,7 @@
 		824BB71F1C60E029007A6190 /* DidCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DidCheckTableViewCell.xib; sourceTree = "<group>"; };
 		824BB7221C60E03C007A6190 /* WillCheckTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WillCheckTableViewCell.swift; sourceTree = "<group>"; };
 		824BB7231C60E03C007A6190 /* WillCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WillCheckTableViewCell.xib; sourceTree = "<group>"; };
+		824F404B1CC515BD0021DAD3 /* AddDelActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDelActivityViewController.swift; sourceTree = "<group>"; };
 		8260CC0A1C548E11009E174E /* SearchTableViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		8260CC0B1C548E11009E174E /* SearchTableViewCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		8260CC0E1C549A6B009E174E /* SearchResonInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResonInfoViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				8265E5B11C60DE390074FAE0 /* WillCheckViewController.swift */,
 				828E5CBB1C99359C001A74F5 /* AddDeleteTableViewCell.swift */,
 				828E5CBC1C99359C001A74F5 /* AddDeleteTableViewCell.xib */,
+				824F404B1CC515BD0021DAD3 /* AddDelActivityViewController.swift */,
 			);
 			path = Manage;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				82DE88E81C8A7FE6004FB4D8 /* AddDeleteUserViewController.swift in Sources */,
 				820332981C720472005B97A0 /* DidNotPassTableViewCell.swift in Sources */,
 				821DD6EA1C9B034D0078E8D5 /* Refresh.swift in Sources */,
+				824F404C1CC515BD0021DAD3 /* AddDelActivityViewController.swift in Sources */,
 				8200C9841C4FBB3100668F72 /* AppDelegate.swift in Sources */,
 				8200C9DE1C4FCFE300668F72 /* AdmSearchViewController.swift in Sources */,
 				8200C9F31C4FCFFA00668F72 /* DidShowViewController.swift in Sources */,

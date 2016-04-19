@@ -239,7 +239,7 @@ class ActivityViewController: UIViewController {
                     string = ""
                 } else {
                     if saveImage(Image.image!, fileName: string) {
-                        print("存放陈工!")
+                        print("存放成工!")
                     } else {
                         print("存放失败!")
                     }

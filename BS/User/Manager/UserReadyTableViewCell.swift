@@ -10,6 +10,7 @@ import UIKit
 
 class UserReadyTableViewCell: UITableViewCell {
 
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var titleImage: UIImageView!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!

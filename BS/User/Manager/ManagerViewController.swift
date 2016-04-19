@@ -11,9 +11,9 @@ class ManagerViewController: SegmentedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc1 = UserDidShowViewController()
+        let vc1 = DidShowViewController()
         vc1.segmentTitle = "已举办"
-        let vc2 = UserReadyShowViewController()
+        let vc2 = ReadyShowViewController()
         vc2.segmentTitle = "筹备中"
         myViewControllers = [vc1,vc2]
     }

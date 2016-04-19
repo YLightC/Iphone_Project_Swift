@@ -19,7 +19,9 @@ class AdmActivityViewController: SegmentedViewController {
         vc2.segmentTitle = "未审核"
         let vc3 = AddDeleteUserViewController()
         vc3.segmentTitle = "增删员工"
-        myViewControllers = [vc1,vc2,vc3]
+        let vc4 = AddDelActivityViewController()
+        vc4.segmentTitle = "活动管理"
+        myViewControllers = [vc1,vc2,vc3,vc4]
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -8,6 +8,8 @@
 
 class AdmManagerViewController: SegmentedViewController {
     
+    var activityInfo : [Dictionary<String,String>] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

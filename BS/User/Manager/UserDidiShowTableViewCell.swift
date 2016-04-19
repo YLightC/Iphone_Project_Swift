@@ -10,6 +10,8 @@ import UIKit
 
 class UserDidiShowTableViewCell: UITableViewCell {
 
+    @IBOutlet var addressImage: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var titleImage: UIImageView!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!

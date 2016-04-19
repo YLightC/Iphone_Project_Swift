@@ -6,7 +6,7 @@
 target 'BS' do
     pod 'Toast', '~> 3.0'
     pod 'ReactiveCocoa', '~> 4.0.4-alpha-4'
-    pod 'XLForm'
+#    pod 'XLForm'
     pod 'CocoaLumberjack'
     pod 'CocoaLumberjack/Swift'
     pod 'MBProgressHUD', '~> 0.9.1'
@@ -18,8 +18,8 @@ pod 'DZNEmptyDataSet'
     pod 'IQKeyboardManager', '~> 3.2.4'
     pod 'SVProgressHUD', '~> 1.1.3'
 #    pod 'TWMessageBarManager', '~> 1.7.2'
-    pod 'TTTAttributedLabel', '~> 1.13.4'
-    #pod "MWPhotoBrowser"
+#    pod 'TTTAttributedLabel', '~> 1.13.4'
+#    #pod "MWPhotoBrowser"
     pod 'SVPullToRefresh', '~> 0.4.1'
     #pod 'EAIntroView', '~> 2.7.0'
 #    pod 'ZWIntroductionViewController', '~> 0.2.1'

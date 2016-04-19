@@ -137,6 +137,9 @@ extension UserMineViewController : UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier(mineIdentifier, forIndexPath: indexPath) as! UserMineTableViewCell
             cell.id.text = self.id
             cell.name.text = self.name
+            cell.headImage.image = getImage(headphoto)
+            let headImageAction = UITapGestureRecognizer(target: self, action: #selector(UserMineViewController.tapAddButton))
+            cell.headImage.addGestureRecognizer(headImageAction)
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier(infoIdentifier, forIndexPath: indexPath) as! UserMineInfoTableViewCell
@@ -192,5 +195,69 @@ extension UserMineViewController : UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    func tapAddButton() {
+        let actionSheet = UIActionSheet(title: "选择图片",
+                                        delegate: nil,
+                                        cancelButtonTitle: "取消",//0
+            destructiveButtonTitle: nil, //2
+            otherButtonTitles: "照相机","照片库" ) //1,2
+        actionSheet.rac_buttonClickedSignal().subscribeNext { [weak self](buttonIndex) -> Void in
+            if buttonIndex.integerValue == 0 {
+                return
+            }
+            let imagePickController = UIImagePickerController()
+            imagePickController.allowsEditing = true //UIImagePickerControllerSourceType
+            imagePickController.sourceType = buttonIndex.integerValue == 1 ? .Camera : .PhotoLibrary
+            imagePickController.delegate = self
+            NSOperationQueue.mainQueue().addOperationWithBlock({
+                self?.presentViewController(imagePickController, animated: true, completion: nil)
+            })
+        }
+        actionSheet.showInView(self.view)
+    }
     
+    
+    func addImage(Image: UIImageView,imagePath: String) {
+        let database = FMDatabase(path: path().path)
+        
+        if database.open() {
+            do {
+                try database.executeUpdate("update userinfo set headphoto=? where id=?", values: [imagePath,userid])
+            } catch {
+                print("插入失败!")
+            }
+            
+        } else {
+            print("打开数据库失败!")
+        }
+        ToastInfo("操作成功!")
+        database.close()
+    }
+}
+
+extension UserMineViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! UserMineTableViewCell
+            cell.headImage.image = image
+            cell.headImage.hidden = false
+            
+            let dataFormart = NSDateFormatter()
+            dataFormart.dateFormat = "yyyy-MM-dd-hh-MM-ss"
+            var string = dataFormart.stringFromDate(NSDate())
+            
+            if cell.headImage.image == nil {
+                string = ""
+            } else {
+                string += userid
+                if saveImage(cell.headImage.image!, fileName: string) {
+                    print("存放成工!")
+                } else {
+                    print("存放失败!")
+                }
+            }
+            addImage(cell.headImage,imagePath: string)
+        }
+    }
 }
