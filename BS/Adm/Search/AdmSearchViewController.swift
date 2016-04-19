@@ -195,7 +195,9 @@ extension AdmSearchViewController {
                     dic["typeInfo"] = typeInfo
                     dic["photo"] = photo
                     dic["status"] = status
-                    nowLeave.append(dic)
+                    if dic["status"] == "1" {
+                        nowLeave.append(dic)
+                    }
                 }
                 tableView.reloadData()
                 nowLeave.forEach({

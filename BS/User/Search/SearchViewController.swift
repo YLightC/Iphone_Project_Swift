@@ -164,6 +164,10 @@ extension SearchViewController : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 0 {
+            return
+        }
         let resonInfo = SearchResonInfoViewController()
         resonInfo.userLeave = self.userLeave[indexPath.row - 1]
         self.hidesBottomBarWhenPushed = true
